@@ -1,5 +1,6 @@
 import React from 'react';
 import produce from 'immer';
+import * as PropTypes from 'prop-types';
 
 import { DevTools } from '../utils/dev-tools';
 
@@ -27,6 +28,15 @@ export const StoreProvider = ({ children, devTools }) => {
       </StateContext.Provider>
     </ModifierContext.Provider>
   );
+};
+
+StoreProvider.propTypes = {
+  devTools: PropTypes.bool,
+  children: PropTypes.node.isRequired
+};
+
+StoreProvider.defaultProps = {
+  devTools: false
 };
 
 export const useStore = () => [React.useContext(StateContext), React.useContext(ModifierContext)];

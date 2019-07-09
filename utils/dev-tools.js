@@ -1,5 +1,6 @@
 import React from 'react';
 import * as R from 'ramda';
+import * as PropTypes from 'prop-types';
 
 import { initialState } from '../store';
 import { objectDiff, objectKeysRecursive } from './object';
@@ -29,3 +30,7 @@ export class DevTools extends React.Component {
     return null;
   }
 }
+
+DevTools.propTypes = {
+  storeState: PropTypes.any.isRequired
+};

@@ -45,7 +45,7 @@ export default () => {
         <Heading>Store state</Heading>
         <Row>First name: { storeState.user.firstName }</Row>
         <Row>Last name: { storeState.user.lastName }</Row>
-        <Row>Account name (immutable): My account</Row>
+        <Row>Account name (immutable): { storeState.account.name }</Row>
       </Container>
 
       <Container>
