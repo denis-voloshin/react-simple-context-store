@@ -19,7 +19,7 @@ class App extends NextApp {
 
     return (
       <Container>
-        <StoreProvider>
+        <StoreProvider devTools={process.env.NODE_ENV === 'development'}>
           <Component {...pageProps} />
         </StoreProvider>
       </Container>

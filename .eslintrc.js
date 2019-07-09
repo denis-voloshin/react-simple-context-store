@@ -101,7 +101,7 @@ module.exports = {
     "no-undef-init": "warn",
     "no-undefined": "error",
     "no-unused-vars": "warn",
-    "no-use-before-define": "error",
+    "no-use-before-define": ["error", { "functions": false }],
 
     /* ==================== Node.js and CommonJS ==================== */
     "global-require": "warn",
@@ -264,7 +264,7 @@ module.exports = {
     "react/jsx-handler-names": "warn",
     "react/jsx-key": "warn",
     "react/jsx-max-props-per-line": ["warn", { "when": "multiline" }],
-    "react/jsx-no-bind": ["warn", { allowArrowFunctions: true }],
+    "react/jsx-no-bind": ["warn", { "allowArrowFunctions": true }],
     "react/jsx-no-comment-textnodes": "warn",
     "react/jsx-no-duplicate-props": "warn",
     "react/jsx-no-target-blank": "warn",
