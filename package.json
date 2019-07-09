@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Simple store using React Context API",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "node -r esm index.js",
+    "build": "next build",
+    "start": "npm run build && next start"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/3a4ik/react-simple-context-store.git"
