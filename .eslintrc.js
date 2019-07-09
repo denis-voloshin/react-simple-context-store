@@ -257,7 +257,7 @@ module.exports = {
     "react/jsx-boolean-value": ["warn", "always"],
     "react/jsx-closing-bracket-location": ["warn", "line-aligned"],
     "react/jsx-closing-tag-location": "warn",
-    "react/jsx-curly-spacing": "warn",
+    "react/jsx-curly-spacing": ["warn", { "children": { "when": "always" } }],
     "react/jsx-equals-spacing": "warn",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/jsx-first-prop-new-line": "warn",
