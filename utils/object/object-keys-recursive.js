@@ -1,6 +1,12 @@
 import * as R from 'ramda';
 
-export const objectKeysRecursive = object => {
+/**
+ * List of object keys recursive
+ *
+ * @param {Object} object Object to get keys from
+ * @return {Array} List of keys
+ */
+export const objectKeysRecursive = R.curry(function objectKeysRecursive(object) {
   const keys = [];
 
   const key = R.compose(R.head, R.keys)(object);
@@ -16,4 +22,4 @@ export const objectKeysRecursive = object => {
   }
 
   return keys;
-};
+});
